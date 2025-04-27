@@ -31,15 +31,56 @@ To write a Python program to perform addition and division operations using a cl
 7. Terminate the program.
 
 ---
-
 ### PROGRAM
 
 ```
 
+class Saveetha:
+    def __init__(self):
+        self.a = 0
+        self.b = 0
 
+    def setvalues(self, a, b):
+        self.a = a
+        self.b = b
 
+    def add(self):
+        return self.a + self.b
+
+    def div(self):
+        if self.b == 0:
+            return "Error: Division by zero is not allowed."
+        else:
+            return self.a / self.b
+def main():
+    s = Saveetha()
+    a = int(input("Enter the first number (a): "))
+    b = int(input("Enter the second number (b): "))
+    s.setvalues(a, b)
+
+    while True:
+        print("\nChoices:")
+        print("1. Addition")
+        print("2. Division")
+        print("0. Exit")
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            result = s.add()
+            print(f"Addition result: {result}")
+        elif choice == 2:
+            result = s.div()
+            print(f"Division result: {result}")
+        elif choice == 0:
+            print("Exiting!")
+            break
+        else:
+            print("Invalid choice")
+main()
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/d7341244-6d86-48ef-a0a4-a3006133c50f)
 
 ### RESULT
+Thus, the Python program to perform addition and division operations using a class Saveetha was successfully written and executed.
