@@ -30,11 +30,38 @@ To write a Python program that reads a file and counts the frequency of each cha
 ### PROGRAM
 
 ```
+# Reg.No:
+# Name:
+
+# Input content from the user
+content = input("Enter the content: ")
+
+# Dictionary to store character frequency
+d1 = {}
+
+# Counting frequency of each character
+for ch in content:
+    if ch in d1:
+        d1[ch] += 1
+    else:
+        d1[ch] = 1
+
+# Printing the frequency
+print("\nCharacter Frequencies:")
+for char, count in d1.items():
+    if char == ' ':
+        print("'space' :", count)
+    elif char == '\n':
+        print("'newline' :", count)
+    else:
+        print(f"'{char}' :", count)
 
 ```
 
-
 ### OUTPUT
-
+![image](https://github.com/user-attachments/assets/943b617f-9325-4a2a-b47f-8226dedf9302)
 
 ### RESULT
+Thus, the program to count the frequency of characters (without using file handling) was successfully written and executed.
+
+
